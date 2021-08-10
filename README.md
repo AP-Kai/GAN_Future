@@ -25,13 +25,15 @@ AI Studio链接： https://aistudio.baidu.com/aistudio/projectdetail/2272759?sha
 
 功能入口： ”hi“或者”你好“
 
-![你好](C:\Users\14331\Desktop\你好.png)
+![你好](https://user-images.githubusercontent.com/77101860/128918442-e965a6db-4677-480b-a3bb-2da1c465ceea.png)
+
 
 ### 1.3.2 人脸融合
 
 功能入口： ”融合“
 
-![融合](C:\Users\14331\Desktop\融合.png)
+![融合](https://user-images.githubusercontent.com/77101860/128918484-97691b8d-df27-41c2-959b-549d7fef46c2.png)
+
 
 ### 1.3.3 以词搜图
 
@@ -39,7 +41,8 @@ AI Studio链接： https://aistudio.baidu.com/aistudio/projectdetail/2272759?sha
 
 例如： ”搜图 樊振东“
 
-![搜图](C:\Users\14331\Desktop\搜图.png)
+![搜图](https://user-images.githubusercontent.com/77101860/128918503-4fe08af8-b175-42a8-87b0-60218e63f33e.png)
+
 
 ### 1.3.4 天气查询
 
@@ -47,7 +50,8 @@ AI Studio链接： https://aistudio.baidu.com/aistudio/projectdetail/2272759?sha
 
 例如： ”查天气 沈阳“
 
-![查天气](C:\Users\14331\Desktop\查天气.png)
+![查天气](https://user-images.githubusercontent.com/77101860/128918527-e848968e-2789-4a08-bbbc-ee093896ff58.png)
+
 
 ## 1.4 项目总结
 
