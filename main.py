@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
 import os
 import subprocess
 import asyncio
+import support
 from wechaty import (
     Contact,
     FileBox,
@@ -9,9 +9,10 @@ from wechaty import (
     Wechaty,
     ScanStatus,
 )
-os.environ['WECHATY_PUPPET']="wechaty-puppet-service"
-os.environ['WECHATY_PUPPET_SERVICE_TOKEN']="puppet_padlocal_a48ae36edb074414a1db144d401ee05" # 这里填Wechaty token
-os.environ['CUDA_VISIBLE_DEVICES']="0"
+
+os.environ['WECHATY_PUPPET'] = "wechaty-puppet-service"
+os.environ['WECHATY_PUPPET_SERVICE_TOKEN'] = "puppet_padlocal_a48ae36edb074414a1db144d401ee05"  # 这里填Wechaty token
+os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 
 async def on_message(msg: Message):
@@ -21,7 +22,10 @@ async def on_message(msg: Message):
         await msg.say('这是自动回复: dong dong dong')
 
     if msg.text() == 'hi' or msg.text() == '你好':
-        await msg.say('这是自动回复: 机器人目前的功能是\n- 收到"ding", 自动回复"dong dong dong"\n- 收到"图片", 自动回复一张图片')
+        await msg.say('这是自动回复: 机器人目前的功能是\n'
+                      '- 收到"融合", 请根据提示完成操作进行人像融合\n'
+                      '- 收到"搜图 xx", 自动搜出一张图片(例如:搜图 垃圾)'
+                      '- 收到')
 
     if msg.text() == '图片':
         url = 'https://images.unsplash.com/photo-1470770903676-69b98201ea1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
@@ -144,7 +148,6 @@ async def on_message(msg: Message):
         img_path = './image/' + img_name
         # 将图片保存为本地文件
         await file_box_user_image.to_file(file_path=img_path)
-
         human_seg = hub.Module(name="deeplabv3p_xception65_humanseg")
         result = human_seg.segmentation(images=[cv2.imread('./image/'+img_name)],
                                         use_gpu=True,
@@ -153,6 +156,18 @@ async def on_message(msg: Message):
         file_box_final_result = FileBox.from_file(result)
         await msg.say(file_box_final_result)
         await msg.say('验证完毕')'''
+
+    if msg.text().split(' ', 1)[0] == '查天气':
+        key = str(msg.text().split(' ')[1])
+        weather = support.getweather(key)
+        await msg.say(weather)
+
+    if msg.text().split(' ', 1)[0] == '搜图':
+        key = str(msg.text().split(' ')[1])
+        url1 = support.download_image(key)
+        file_box = FileBox.from_url(url=url1, name='xx.jpg')
+        await msg.say(file_box)
+
 
 async def on_scan(
         qrcode: str,
@@ -178,9 +193,9 @@ async def main():
 
     bot = Wechaty()
 
-    bot.on('scan',      on_scan)
-    bot.on('login',     on_login)
-    bot.on('message',   on_message)
+    bot.on('scan', on_scan)
+    bot.on('login', on_login)
+    bot.on('message', on_message)
 
     await bot.start()
 
