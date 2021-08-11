@@ -32,6 +32,8 @@ AI Studio链接： https://aistudio.baidu.com/aistudio/projectdetail/2272759?sha
 
 功能入口： ”融合“
 
+we’d make beautiful babies
+
 ![融合](https://user-images.githubusercontent.com/77101860/128918484-97691b8d-df27-41c2-959b-549d7fef46c2.png)
 
 
