@@ -71,11 +71,23 @@ we’d make beautiful babies
 
 团队： 吃饱就睡队
 
-成员： [AP-Kai](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/675310)、[nian53321](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/724244)
+成员： [AP-Kai](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/675310)、[GT-ZhangAcer](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/29724)、[nian53321](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/724244)
 
-致谢： 感谢项目组成员们的付出！
+致谢：[PaintTransformer](https://github.com/wzmsltw/PaintTransformer)
 
 ​			感谢各位大佬的鼎力相助！
 
 ​			感谢飞桨！~~~
+
+## 个人简介
+
+> 作者： AP-Kai 
+
+> 学校： 沈阳工业大学 大一在读
+
+> AI Studio: [https://aistudio.baidu.com/aistudio/personalcenter/thirdview/675310](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/675310)
+
+> GitHub: [https://github.com/AP-Kai/AP-Kai](https://github.com/AP-Kai/AP-Kai)
+
+
 
